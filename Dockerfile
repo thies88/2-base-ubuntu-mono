@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 # variable for version
 #ENV REPO-MEDIAAREA-VERSION="repo-mediaarea_1.0-12_all.deb"
-#ENV UBUNTU-CODE-NAME="bionic"
+ENV $REL="focal"
 
 RUN \
  echo "**** install apt-transport-https ****" && \
@@ -13,7 +13,7 @@ RUN \
  apt-get install -y apt-transport-https gnupg2 && \
  echo "**** add mono repository ****" && \
  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
- echo "deb http://download.mono-project.com/repo/ubuntu bionic main" | tee /etc/apt/sources.list.d/mono-official.list && \
+ echo "deb http://download.mono-project.com/repo/ubuntu ${REL} main" | tee /etc/apt/sources.list.d/mono-official.list && \
  echo "**** add mediaarea repository ****" && \
  curl -L \
 	"https://mediaarea.net/repo/deb/repo-mediaarea_1.0-12_all.deb" \
