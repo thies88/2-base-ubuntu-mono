@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 # variable for version
 #ENV REPO-MEDIAAREA-VERSION="repo-mediaarea_1.0-12_all.deb"
-ENV $REL="bionic"
+ENV REL="bionic"
 
 RUN \
  echo "**** install apt-transport-https ****" && \
