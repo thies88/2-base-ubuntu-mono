@@ -23,7 +23,6 @@ RUN \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
-	--no-install-recommends \
 	bzip2 \
 	ca-certificates-mono \
 	libcurl4-openssl-dev \
