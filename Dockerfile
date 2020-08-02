@@ -24,7 +24,6 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	--no-install-recommends \
-	--no-install-suggests \
 	bzip2 \
 	ca-certificates-mono \
 	libcurl4-openssl-dev \
