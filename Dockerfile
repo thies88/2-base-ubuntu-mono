@@ -35,7 +35,11 @@ RUN \
 	sqlite3 \
 	unzip && \
  echo "**** clean up ****" && \
+ apt-get autoremove -y --purge  && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
-	/var/tmp/*
+	/var/cache/apt/* \
+	/var/tmp/* \
+	# clean mono aot cache.. not needed ?
+	rm -rf /usr/lib/mono/aot-cache/amd64/*
