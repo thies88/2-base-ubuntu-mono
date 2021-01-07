@@ -12,7 +12,7 @@ RUN \
  echo "deb http://download.mono-project.com/repo/ubuntu ${REL} main" | tee /etc/apt/sources.list.d/mono-official.list && \
  echo "**** add mediaarea repository ****" && \
  curl -L \
-	"https://mediaarea.net/repo/deb/repo-mediaarea_1.0-12_all.deb" \
+	"https://mediaarea.net/repo/deb/repo-mediaarea_1.0-14_all.deb" \
 	-o /tmp/key.deb && \
  dpkg -i /tmp/key.deb && \
  echo "deb https://mediaarea.net/repo/deb/ubuntu ${REL} main" | tee /etc/apt/sources.list.d/mediaarea.list && \
