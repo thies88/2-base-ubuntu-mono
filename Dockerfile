@@ -1,4 +1,4 @@
-FROM thies88/base-ubuntu
+FROM 1-base-ubuntu:focal
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -18,7 +18,7 @@ RUN \
 	ca-certificates-mono \
 	libcurl4-openssl-dev \
 	mono-devel \
-	mono-vbnc \
+	mono-vbnc && \
  echo "**** clean up ****" && \
  apt-get autoremove -y --purge  && \
  rm -rf \
